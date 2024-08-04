@@ -40,7 +40,13 @@ urls = [
     "https://www.amazon.de/-/en/276680-Ajax-All-Purpose-Cleaner-Frischeduft/dp/B00ACWXZTY/ref=sr_1_52",
     "https://www.amazon.nl/-/en/Ajax-All-purpose-cleaner-Citrovers-can/dp/B00CJKLV4I/ref=sr_1_75",
     # 洗碗機 Finish,Sun,Somat..
+    # 洗碗精
+    "https://www.amazon.de/-/en/DE3070/dp/B0CL9QJ6QV/ref=sr_1_5",
+    "https://www.amazon.de/-/en/Ecover-ecological-dishwasher-detergent-lemon/dp/B0013G4G5U/ref=sr_1_6",
+    "https://www.amazon.nl/-/en/ECOVER-Dishwashing-liquid-Chamomile-Clementine/dp/B08N59LYF5/ref=sr_1_3",
 
+
+    
     # 其他
     "https://www.amazon.de/-/en/gp/product/B0CS612572/ref=ewc_pr_img_2?smid=A3JWKAKR8XB7XF&psc=1",
     "https://www.amazon.de/-/en/gp/product/B07PXMT4HX/ref=ewc_pr_img_3?smid=A3JWKAKR8XB7XF&psc=1",
