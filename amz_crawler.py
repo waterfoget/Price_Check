@@ -5,7 +5,6 @@ from openpyxl import load_workbook
 from openpyxl.drawing.image import Image
 from io import BytesIO
 from openpyxl.styles import Alignment
-from openpyxl.worksheet.hyperlink import Hyperlink
 from openpyxl.styles import Font
 import datetime
 
@@ -163,8 +162,6 @@ for row_num, row_data in enumerate(df.itertuples(), 2):  # 從row2 開始寫入
     for col_num, cell_value in enumerate(row_data[1:], 1):
         ws.cell(row=row_num, column=col_num, value=cell_value)
 
-# 保存 Excel 文件
-#wb.save(excel_path)
 
 print("Data has been written to amazon_test.xlsx")
 
