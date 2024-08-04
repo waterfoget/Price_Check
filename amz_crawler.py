@@ -6,7 +6,7 @@ from openpyxl.drawing.image import Image
 from io import BytesIO
 from openpyxl.styles import Alignment
 from openpyxl.styles import Font
-import datetime
+from datetime import datetime
 
 
 urls = [
@@ -142,9 +142,12 @@ for url in urls:
         'Delivery': delivery_info
     })
 
+# 获取当前日期
+current_date = datetime.now().strftime('%Y%m%d')
+
 # 创建 DataFrame
 df = pd.DataFrame(data)
-excel_path = 'amazon_test.xlsx'
+excel_path = f'amazon_{current_date}.xlsx'
 
 # 使用 pandas 将数据写入 Excel 文件
 df.to_excel(excel_path, index=False)
@@ -163,7 +166,7 @@ for row_num, row_data in enumerate(df.itertuples(), 2):  # 從row2 開始寫入
         ws.cell(row=row_num, column=col_num, value=cell_value)
 
 
-print("Data has been written to amazon_test.xlsx")
+print(f"Data has been written to {excel_path}")
 
 
 # ========================================這裏是調整Excel======================================================
@@ -229,11 +232,6 @@ def auto_adjust_column_width(ws, start_col):
 # 對齊D以後的内容
 auto_adjust_column_width(ws, start_col=4)  # Column D is the 4th column
 
-# 获取当前日期和时间
-current_datetime = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+wb.save(excel_path)
 
-# 保存修改后的 Excel 文件並重命名
-new_excel_path = f'amazon_{current_datetime}.xlsx'
-wb.save(new_excel_path)
-
-print(f"Data has been written to {new_excel_path}")
+print("Excel has been adjusted.")
